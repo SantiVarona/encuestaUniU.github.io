@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quieres ser mi novia?</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe4e1, #fff0f5);
+      color: #333;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    header, section, footer {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    header h1, header a {
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px #000;
+      animation: bounceIn 1.5s ease-in-out;
+    }
+    header a {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: #ffb6c1;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s;
+      animation: fadeInUp 2s ease-in-out;
+    }
+    header a:hover {
+      background: #ff69b4;
+    }
+    .reasons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .reason {
+      background: #ffe4e1;
+      border-radius: 15px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      animation: fadeInUp 1s ease forwards;
+    }
+    .reason:hover {
+      transform: translateY(-10px);
+    }
+    .final {
+      background: #ffccd5;
+      padding: 80px 20px;
+      position: relative;
+      animation: pulse 3s infinite;
+    }
+    .final h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .final button {
+      font-size: 1.2rem;
+      margin: 10px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      background: #ff69b4;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .final button:hover {
+      background: #ff1493;
+      transform: scale(1.1);
+    }
+    .final button.animate {
+      animation: clickPop 0.4s ease;
+    }
+    @keyframes clickPop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .heart {
+      position: absolute;
+      color: pink;
+      animation: float 5s infinite;
+      font-size: 2rem;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(1); opacity: 1; }
+      100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes bounceIn {
+      0%, 20%, 40%, 60%, 80%, 100% {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      }
+      0% { opacity: 0; transform: scale(0.3); }
+      50% { opacity: 1; transform: scale(1.05); }
+      70% { transform: scale(0.9); }
+      100% { transform: scale(1); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+    footer {
+      background: #fce4ec;
+      font-size: 1.2rem;
+      animation: fadeIn 3s ease-in;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Tengo algo muy especial que decirte...</h1>
+  <a href="#historia">Descúbrelo</a>
+</header>
+
+<section id="historia">
+  <h2>Nuestra historia</h2>
+  <p>Desde el primer momento en que te vi, supe que había algo especial en ti. Las pequeñas coincidencias que nos unieron se convirtieron en momentos inolvidables. Cada conversación, cada sonrisa, cada silencio compartido, fue construyendo un puente directo a mi corazón.</p>
+</section>
+
+<section>
+  <h2>Razones por las que me encantas</h2>
+  <div class="reasons">
+    <div class="reason">Tu sonrisa ilumina mis días ☀️</div>
+    <div class="reason">Eres única en el universo 🌌</div>
+    <div class="reason">Me haces sentir amado 💖</div>
+    <div class="reason">Cada momento contigo es especial 🕊️</div>
+    <div class="reason">Tu voz es mi melodía favorita 🎶</div>
+    <div class="reason">Abrazarte es mi lugar seguro 🤗</div>
+    <div class="reason">Tienes el corazón más hermoso ❤️</div>
+    <div class="reason">Eres mi mejor amiga y mi amor 👫</div>
+  </div>
+</section>
+
+<section>
+  <h2>Mis sentimientos por ti</h2>
+  <p>Desde que te conocí, algo en mí cambió. Tu risa, tu forma de ver el mundo, tu ternura... todo en ti me encanta. He pensado en esto por mucho tiempo y hoy quiero abrirte mi corazón como nunca antes.</p>
+  <p>Prometo estar a tu lado en los momentos buenos y en los no tan buenos. Quiero apoyarte, escucharte, y compartir todo lo que la vida nos tenga preparado.</p>
+  <p>Me haces soñar despierto y creer que el amor verdadero existe. Gracias por hacer que todo valga la pena. 💗</p>
+</section>
+
+<section>
+  <h2>Lo que imagino contigo</h2>
+  <p>Imagino paseos tomados de la mano, risas espontáneas, conversaciones profundas en la madrugada, sueños compartidos y metas alcanzadas juntos. Imagino una vida donde tú y yo caminamos lado a lado sin soltar nuestras manos.</p>
+</section>
+
+<section>
+  <h2>Una promesa</h2>
+  <p>Prometo ser sincero, respetarte siempre, admirarte cada día y recordarte lo maravillosa que eres. No importa lo que el destino nos depare, mi corazón ya ha decidido caminar contigo.</p>
+</section>
+
+<section class="final">
+  <h2>¿Quieres ser mi novia?</h2>
+  <div class="hearts" id="hearts-container"></div>
+  <button onclick="responder(this)">Sí, claro que sí ❤️</button>
+  <button onclick="responder(this)">¡Por supuesto! 😘</button>
+</section>
+
+<footer>
+  <p>Gracias por existir. Te quiero con todo mi corazón. 💗</p>
+  <p>Con amor, El amor de tu vida</p>
+</footer>
+
+<script>
+  function responder(button) {
+    button.classList.add('animate');
+    setTimeout(() => button.classList.remove('animate'), 400);
+    alert("¡Me haces el más feliz del mundo! 💕");
+  }
+
+  const heartsContainer = document.getElementById('hearts-container');
+  setInterval(() => {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+    heart.textContent = '❤️';
+    heartsContainer.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+  }, 300);
+</script>
+
+</body>
+</html>
